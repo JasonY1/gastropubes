@@ -9,21 +9,14 @@
 </head>
 <body>
   <header class="navbar navbar-static-top navbar-inverse">
+  <div class="container">
   <div class="navbar-inner">
-    <div class="container">
+    
       <div id="header-logo">
       <%= link_to image_tag('nblogo.jpg'),   '#', id: "logo" %>
-      </div>
       
-      <button class = "navbar-toggle" data-toggle = "collapse"
-                      data-target = ".navHeaderCollapse">
-        <span class = "icon-bar"></span>            
-        <span class = "icon-bar"></span>
-        <span class = "icon-bar"></span>
-      </button>
-        
-      <div id="navbar">
-        <div class = "collapse navbar-collapse navHeaderCollapse">
+      
+      <div class = "collapse navbar-collapse navHeaderCollapse">
       <nav>
         <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home",      '#' %></li>
@@ -31,15 +24,23 @@
             <li><%= link_to "About",     '#' %></li>
             <li><%= link_to "VIP",       '#' %></li>
           </ul>
-        
+        </nav>
       </div>
-    </div>
+      <button class = "navbar-toggle" data-toggle = "collapse"
+                      data-target = ".navHeaderCollapse">
+        <span class = "icon-bar"></span>            
+        <span class = "icon-bar"></span>
+        <span class = "icon-bar"></span>
+      </button>
+        
+      
+    
   </div>
   
   <!-- My Carousel
     ============================================================= -->
-  
+</body>
+
 <%= yield %>
 
-</body>
 </html>

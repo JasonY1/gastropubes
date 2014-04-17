@@ -4,3 +4,24 @@
 .navbar-brand {
   padding: 0;
 }
+
+body {
+  background-color: black;
+}
+
+.carousel .item {
+    max-width: 100%; /*slider width*/
+    max-height: 500px; /*slider height*/
+}
+
+/*full width container*/
+@media (max-width: 767px) {
+    .block {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}

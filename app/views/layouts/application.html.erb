@@ -5,6 +5,7 @@
     <%= stylesheet_link_tag "application", media: "all",
     "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    
     <%= csrf_meta_tags %>
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -32,8 +33,16 @@
             <li>
               <%= link_to "Home",       root_path %>
             </li>
-            <li>
-              <%= link_to "Menu",       menu_path %>
+            <li class="dropdown">
+               
+               <%= link_to 'Menu <b class="caret"></b>'.html_safe, root_path, 
+               :id => 'setupdrop', :'data-toggle' => 'dropdown', :class => 'dropdown-toggle' %>
+               <ul class="dropdown-menu">
+                 <%= link_to "Item",    '#' %>
+                 <%= link_to "things",  '#' %>
+                 <%= link_to "more",    '#' %>
+                 <%= link_to "drinks",  '#' %>
+               </ul>
             </li>
             <li>
               <%= link_to "About",      about_path %>
@@ -47,12 +56,13 @@
       </div>
 
     </div>
+    
   </body>
   <!-- END NAVBAR -->
 
   <%= yield %>
 
   <footer>
-    Put the Twitter/facebook/yelp links.
+    Put the Twitter/facebook/yelp links in FOOTER
   </footer>
 </html>

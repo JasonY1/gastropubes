@@ -1,68 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Gastro</title>
-    <%= stylesheet_link_tag "application", media: "all",
-    "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    
-    <%= csrf_meta_tags %>
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <!-- START NAVBAR
-  ============================================== -->
-  <body>
+	<head>
+		<title>Gastro</title>
+		<%= stylesheet_link_tag "application", media: "all",
+		"data-turbolinks-track" => true %>
+		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
-    <div class="navbar-wrapper container">
-      <div class="navbar navbar-inverse navbar-static-top" role="navigation">
-        <div class="navbar-header">
-          <button class = "navbar-toggle" data-toggle = "collapse"
-          data-target = ".navbar-collapse">
-            <span class = "icon-bar"></span>
-            <span class = "icon-bar"></span>
-            <span class = "icon-bar"></span>
-          </button>
+		<%= csrf_meta_tags %>
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]
+		</head>
 
-          <a class="navbar-brand logo-nav"> <%= link_to image_tag('nblogo.jpg'),   root_path, id: "logo" %> </a>
-        </div>
-        <div class = "navbar-collapse collapse ">
+		START NAVBAR
+		============================================== -->
+		<body>
 
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <%= link_to "Home",       root_path %>
-            </li>
-            <li class="dropdown menuitems">
-               
-               <%= link_to 'Menu <b class="caret"></b>'.html_safe, root_path, 
-               :id => 'setupdrop', :'data-toggle' => 'dropdown', :class => 'dropdown-toggle' %>
-               <ul class="dropdown-menu">
-                 <%= link_to "Sharsies",    '#' %>
-                 <%= link_to "Persies",  '#' %>
-                 <%= link_to "Specialties",    '#' %>
-                 <%= link_to "Drinksies",  '#' %>
-               </ul>
-            </li>
-            <li>
-              <%= link_to "About",      about_path %>
-            </li>
-            <li>
-              <%= link_to "VIP",        vip_path %>
-            </li>
-          </ul>
+			<div class="container">
+				<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+					<div class="navbar-header">
+						<button class = "navbar-toggle" data-toggle = "collapse"
+						data-target = ".navbar-collapse">
+							<span class = "icon-bar"></span>
+							<span class = "icon-bar"></span>
+							<span class = "icon-bar"></span>
+						</button>
 
-        </div>
-      </div>
+						<a class="navbar-brand logo-nav"> <%= link_to image_tag('nblogo.jpg'),   root_path, id: "logo" %> </a>
+					</div>
+					<div class = "navbar-collapse collapse ">
 
-    </div>
-    
-  </body>
-  <!-- END NAVBAR -->
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<%= link_to "Home",       root_path %>
+							</li>
+							<li class="dropdown menuitems">
 
-  <%= yield %>
+								<%= link_to 'Menu <b class="caret"></b>'.html_safe, root_path,
+								:id => 'setupdrop', :'data-toggle' => 'dropdown', :class => 'dropdown-toggle' %>
+								<ul class="dropdown-menu">
+									<%= link_to "Sharsies",    '#' %>
+									<%= link_to "Persies",  '#' %>
+									<%= link_to "Specialties",    '#' %>
+									<%= link_to "Drinksies",  '#' %>
+								</ul>
+							</li>
+							<li>
+								<%= link_to "About",      about_path %>
+							</li>
+							<li>
+								<%= link_to "VIP",        vip_path %>
+							</li>
+						</ul>
 
-  <footer>
-    Put the Twitter/facebook/yelp links in FOOTER
-  </footer>
+					</div>
+				</div>
+
+			</div>
+
+		</body>
+		<!-- END NAVBAR -->
+
+		<%= yield %>
+
+		<footer>
+			<div class="container">
+				<div class="navbar navbar-inverse navbar-static-bottom" role="navigation">
+					<div class="col-md-4 address">
+						<strong>Hours</strong>
+						<br>
+						Monday - Closed
+						<br>
+						Tuesday, Wednesday, Sunday - 5 PM - 12 AM
+						<br>
+						Thursday, Friday, Saturday - 5 PM - 2AM
+					</div>
+					</p>
+					<div class="col-md-4">
+						<address>
+							<strong>Contact Us</strong>
+							<br>
+							4633 Convoy St #102
+							<br>
+							San Diego, CA 92111
+							<br>
+							<abbr title="Phone"> Phone:</abbr> (858) 499-8999
+
+						</address>
+					</div>
+					<div class="col-md-4">
+					  <ul class="socialmeds">
+					    <li>
+					Put the Twitter/facebook/yelp links in FOOTER
+				</div>
+			</div>
+			
+		</footer>
 </html>

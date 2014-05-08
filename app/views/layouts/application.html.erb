@@ -34,15 +34,19 @@
 							<li>
 								<%= link_to "Home",       root_path %>
 							</li>
-							<li class="dropdown menuitems">
+							<li class="dropdown">
 
-								<%= link_to 'Menu <b class="caret"></b>'.html_safe, root_path,
-								:id => 'setupdrop', :'data-toggle' => 'dropdown', :class => 'dropdown-toggle' %>
+								<%= link_to 'Menu <b class="caret"></b>'.html_safe, menu_path,
+								:id => 'menudrop', :'data-toggle' => 'dropdown', :class => 'dropdown-toggle' %>
+								
+								
 								<ul class="dropdown-menu">
-									<%= link_to "Sharsies",    '#' %>
-									<%= link_to "Persies",  '#' %>
-									<%= link_to "Specialties",    '#' %>
-									<%= link_to "Drinksies",  '#' %>
+								  <li class="row">
+  									<%= link_to "Sharsies",    '#' %>
+  									<%= link_to "Persies",  '#' %>
+  									<%= link_to "Specialties",    '#' %>
+  									<%= link_to "Drinksies",  '#' %>
+  						    </li>
 								</ul>
 							</li>
 							<li>

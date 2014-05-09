@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Gastro</title>
+		<title><%= nolbu_title(yield(:title)) %></title>
 		<%= stylesheet_link_tag "application", media: "all",
 		"data-turbolinks-track" => true %>
 		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -34,7 +34,11 @@
 							<li>
 								<%= link_to "Home",       root_path %>
 							</li>
-							<li class="dropdown">
+							<li>
+							  <%= link_to "Menu",       menu_path %>
+							</li>
+							<!--
+							  <li class="dropdown">
 
 								<%= link_to 'Menu <b class="caret"></b>'.html_safe, menu_path,
 								:id => 'menudrop', :'data-toggle' => 'dropdown', :class => 'dropdown-toggle' %>
@@ -42,13 +46,13 @@
 								
 								<ul class="dropdown-menu">
 								  <li class="row">
-  									<%= link_to "Sharsies",    '#' %>
+  									<%= link_to "Sharsies",    'menu_path' %>
   									<%= link_to "Persies",  '#' %>
   									<%= link_to "Specialties",    '#' %>
   									<%= link_to "Drinksies",  '#' %>
   						    </li>
 								</ul>
-							</li>
+							</li> -->
 							<li>
 								<%= link_to "About",      about_path %>
 							</li>
@@ -94,11 +98,9 @@
 					</div>
 					<div class="col-md-4">
 					  <ul class="socialmeds">
-					    <li>
-					      <%= link_to image_tag('facebookicon.png'),   "https://www.facebook.com/NolbuSD", id: "facebook" %>
-					Put the Twitter/facebook/yelp links in FOOTER
-					<%= link_to image_tag('twittericon.png'),   "http://www.facebook.com", id: "twitter" %>
-					<%= link_to image_tag('yelpicon.png'),   "http://www.yelp.com/biz/nolbu-mini-gastropub-san-diego", id: "yelp" %>
+				      <%= link_to image_tag('facebookicon.png'),   "https://www.facebook.com/NolbuSD", id: "facebook" %>
+							<%= link_to image_tag('twittericon.png'),   "http://www.facebook.com", id: "twitter" %>
+				      <%= link_to image_tag('yelpicon.png'),   "http://www.yelp.com/biz/nolbu-mini-gastropub-san-diego", id: "yelp" %>
 				  </div>
 			</div>
 			

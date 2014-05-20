@@ -17,14 +17,7 @@ ActiveRecord::Schema.define(version: 20140418024124) do
     t.string   "title"
     t.string   "name"
     t.text     "description"
-    t.decimal  "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "menus", force: true do |t|
-    t.string   "title"
-    t.text     "description"
+    t.decimal  "price",       precision: 8, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
